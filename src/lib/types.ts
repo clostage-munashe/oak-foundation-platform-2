@@ -1,0 +1,55 @@
+export type Registration = {
+  id: string;
+  code: string;
+  sessionToken?: string;
+  emailStatus?: string;
+  accommodation?: string;
+  firstName: string;
+  lastName: string;
+  organisation: string;
+  programmeArea: string;
+  role: string;
+  email: string;
+  phone: string;
+  dietary: string;
+  accessibility: string;
+  travel: string;
+  consent: boolean;
+  createdAt: string;
+  checkedInAt: string | null;
+};
+export type Session = {
+  id: string;
+  day: number;
+  time: string;
+  end: string;
+  title: string;
+  speaker: string;
+  venue: string;
+  type: 'Plenary' | 'Breakout' | 'Workshop' | 'Social' | 'Break';
+  description: string;
+  featured?: boolean;
+};
+export type Note = {
+  ownerId?: string;
+  sessionId?: string;
+  id: string;
+  name: string;
+  organisation: string;
+  text: string;
+  day: number;
+  time: string;
+};
+export type Partner = {
+  id: string;
+  initials: string;
+  name: string;
+  region: string;
+  category: string;
+  tags: string[];
+  since: number;
+  website: string;
+  about: string;
+  contact: string;
+  email: string;
+};
